@@ -1,6 +1,9 @@
-// GIVEN a command-line application that accepts user input
-// WHEN I start the application
-// THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
+const promptAction = require("./lib/prompt");
+
+(async () => {
+	({action} = await promptAction());
+	console.log(action);
+})();
 // WHEN I choose to view all departments
 // THEN I am presented with a formatted table showing department names and department ids
 // WHEN I choose to view all roles
